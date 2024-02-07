@@ -1,0 +1,46 @@
+@import "../abstracts/_mixins.scss";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+.footer {
+    @include dis-flex(row,space-between,center);
+
+  .left_flower_bg {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../imgs/backshadow images/footer_left.svg');
+  }
+  .footer_cont {
+    @include dis-flex(column,center,center);
+    gap: 20px;
+    .logo {
+        width: 40px;
+        img{
+            width: 100%;
+        }
+    }
+    .text{
+    @include dis-flex(row,center,center);
+    gap: 5px;
+        img{
+            width: 15px;
+        }
+        p{
+            color: $primary-color;
+            font-size: 10px;
+            width: 62px;
+        }
+    }
+  }
+  .right_flower_bg {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../imgs/backshadow images/footer_right.svg');
+  }
+}

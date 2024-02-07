@@ -7,14 +7,9 @@
 @use 'scss/abstracts/placeholders';
 
 @use 'scss/components/bottons';
+@use 'scss/components/msg';
 
 @use 'scss/layout/header';
+@use 'scss/layout/footer';
 
 @use 'scss/pages/index';
-
-@use 'scss/pages/emails/card_cover';
-@use 'scss/components/msg';
-@use 'scss/pages/add_email';
-@use 'scss/pages/bouquet';
-
-

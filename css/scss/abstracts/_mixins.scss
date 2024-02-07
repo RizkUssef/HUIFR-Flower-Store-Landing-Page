@@ -34,3 +34,9 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+@mixin nav-link-hover-active(){
+    @include border(1.5px, solid, $primary-color, 15px);
+    color: $secondary-color;
+    background-color: $primary-color;
+}
