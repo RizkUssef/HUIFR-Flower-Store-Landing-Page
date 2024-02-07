@@ -1,0 +1,240 @@
+@import "../abstracts/_mixins.scss";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+// choosed bouquet container
+// .choosed_container{
+//     @include dis-flex(column, center, center);
+//     height: 60vh;
+//     width: 100vw;
+//     .the_bouquet{
+//         @include dis-flex(column, center, center);
+//         height: 70%;
+//         width: 30%;
+//         @include border(2px,solid,#c09aa5,25px);
+//     }
+// }
+
+// bouquet section
+.choose_bouquet{
+    @include dis-flex(column, center, center);
+    height: 100vh;
+    form{
+        @include dis-flex(column,center,center);
+        height: 90%;
+        .flower_bouquet{
+            width: 80%;
+            margin: auto;
+            @include dis-flex(row, flex-start, center);
+            flex-wrap: wrap;
+            gap: 29.8px;
+            .radio_bouquet_1,
+            .radio_bouquet_2,
+            .radio_bouquet_3,
+            .radio_bouquet_4,
+            .radio_bouquet_5,
+            .radio_bouquet_6,
+            .radio_bouquet_7,
+            .radio_bouquet_8,
+            .radio_bouquet_9,
+            .radio_bouquet_10{
+                @extend %inputs-radio-color-flower;
+                @include border(2px, solid, #c09aa5, 40px);
+                width: 150px; /* Adjust the width and height of the custom radio */
+                height: 200px;
+                // margin-right: 10px;
+                padding: 20px;
+                cursor: pointer;
+                &:checked {
+                  background-color: #c09aa5;
+                }
+            }
+            .radio_bouquet_1{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/1.png"));
+            }
+            .radio_bouquet_2{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/2.png"));
+            }
+            .radio_bouquet_3{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/3.png"));
+            }
+            .radio_bouquet_4{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/4.png"));
+            }
+            .radio_bouquet_5{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/5.png"));
+            }
+            .radio_bouquet_6{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/6.png"));
+            }
+            .radio_bouquet_7{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/7.png"));
+            }
+            .radio_bouquet_8{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/8.png"));
+            }
+            .radio_bouquet_9{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/9.png"));
+            }
+            .radio_bouquet_10{
+                @include pick-radio-flower(url("../../../imgs/bouquet of flowers/10.png"));
+            }
+        }
+    }
+}
+
+// custum card section
+.choose_custumcard_section{
+    @include dis-flex(column, center, center);
+    margin-bottom: 50px;
+    form{
+        @include dis-flex(column,  space-evenly,center);
+        gap: 50px;
+        .memory_card{
+            width: 84%;
+            margin: auto;
+            @include dis-flex(row, flex-start, center);
+            flex-wrap: wrap;
+            gap: 29.8px;
+            .radio_memory_card_1,
+            .radio_memory_card_2,
+            .radio_memory_card_3,
+            .radio_memory_card_4,
+            .radio_memory_card_5,
+            .radio_memory_card_6,
+            .radio_memory_card_7,
+            .radio_memory_card_8,
+            .radio_memory_card_9{
+                @extend %inputs-radio-color-flower;
+                @include border(2px, solid, #c09aa5, 40px);
+                width: 300px; /* Adjust the width and height of the custom radio */
+                height: 250px;
+                // margin-right: 10px;
+                padding: 20px;
+                cursor: pointer;
+                &:checked {
+                  background-color: #c09aa5;
+                }
+            }
+            .radio_memory_card_1{
+                @include pick-radio-flower(url("../../../imgs/memory cards/1.jpeg"));
+                background-origin: content-box;
+            }
+            .radio_memory_card_2{
+                @include pick-radio-flower(url("../../../imgs/memory cards/2.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_3{
+                @include pick-radio-flower(url("../../../imgs/memory cards/3.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_4{
+                @include pick-radio-flower(url("../../../imgs/memory cards/4.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_5{
+                @include pick-radio-flower(url("../../../imgs/memory cards/5.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_6{
+                @include pick-radio-flower(url("../../../imgs/memory cards/6.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_7{
+                @include pick-radio-flower(url("../../../imgs/memory cards/7.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_8{
+                @include pick-radio-flower(url("../../../imgs/memory cards/8.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_9{
+                @include pick-radio-flower(url("../../../imgs/memory cards/9.jpeg"));
+                background-origin: content-box;
+        
+            }
+        }
+    }
+}
+
+// static card section
+.choose_staticcard_section{
+    @include dis-flex(column, center, center);
+    margin-bottom: 50px;
+    form{
+        @include dis-flex(column,  space-evenly,center);
+        gap: 50px;
+        .memory_card{
+            width: 84%;
+            margin: auto;
+            @include dis-flex(row, flex-start, center);
+            flex-wrap: wrap;
+            gap: 29.8px;
+            .radio_memory_card_1,
+            .radio_memory_card_2,
+            .radio_memory_card_3,
+            .radio_memory_card_4,
+            .radio_memory_card_5,
+            .radio_memory_card_6,
+            .radio_memory_card_7{
+                @extend %inputs-radio-color-flower;
+                @include border(2px, solid, #c09aa5, 40px);
+                width: 300px; /* Adjust the width and height of the custom radio */
+                height: 250px;
+                // margin-right: 10px;
+                padding: 20px;
+                cursor: pointer;
+                &:checked {
+                  background-color: #c09aa5;
+                }
+            }
+            .radio_memory_card_1{
+                @include pick-radio-flower(url("../../../imgs/custom cards/1.jpeg"));
+                background-origin: content-box;
+            }
+            .radio_memory_card_2{
+                @include pick-radio-flower(url("../../../imgs/custom cards/2.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_3{
+                @include pick-radio-flower(url("../../../imgs/custom cards/3.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_4{
+                @include pick-radio-flower(url("../../../imgs/custom cards/4.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_5{
+                @include pick-radio-flower(url("../../../imgs/custom cards/5.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_6{
+                @include pick-radio-flower(url("../../../imgs/custom cards/6.jpeg"));
+                background-origin: content-box;
+        
+            }
+            .radio_memory_card_7{
+                @include pick-radio-flower(url("../../../imgs/custom cards/7.jpeg"));
+                background-origin: content-box;
+        
+            }
+        }
+    }
+}
+
+.hide{
+    display: none;
+}
+
+

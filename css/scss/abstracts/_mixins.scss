@@ -1,0 +1,36 @@
+@mixin dis-flex($direction,$justify,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin border($width,$type,$color,$radius){
+    border: $width $type $color;
+    border-radius: $radius;
+}
+
+@mixin dis-grid($columns,$rows){
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+@mixin img-uploaded($rotate){
+    object-fit: cover;
+    border-radius: 5px; 
+    border-bottom:50px solid #ffffff;
+    border-top:10px solid #ffffff;
+    border-left:10px solid #ffffff;
+    border-right:10px solid #ffffff;
+    transform: $rotate;
+}
+
+@mixin pick-radio-flower($bg-image){
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    background-image: $bg-image;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

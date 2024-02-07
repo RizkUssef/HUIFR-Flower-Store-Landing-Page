@@ -1,0 +1,402 @@
+@import "../abstracts/_mixins.scss";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+.fisrt_section {
+  @include dis-flex(column, center, center);
+  h1 {
+    margin-bottom: 30px;
+  }
+  .card {
+    @include dis-flex(row, space-between, center);
+    @include border(1.5px, solid, #c09aa5, 50px);
+    width: 80%;
+    height: 70vh;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    margin-bottom: 50px;
+    .flower_container {
+      @include dis-grid(1fr, repeat(7, 1fr));
+      width: 25%;
+      height: 100%;
+      margin-top: 20px;
+      margin-left: 20px;
+      .flower {
+        grid-column: 1/2;
+        grid-row: 1/7;
+        width: 100%;
+        .f_img {
+          width: 100%;
+          margin: auto;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 25px;
+          // img {
+          //   width: 100%;
+          //   height: 100%;
+          // }
+        }
+      }
+      .logo {
+        grid-column: 1/2;
+        grid-row: 7/9;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        align-self: flex-end;
+      }
+      .background {
+        grid-row: 6/8;
+        grid-column: 1/2;
+        align-self: flex-end;
+        justify-self: flex-start;
+        width: 250px;
+        height: 270px;
+        margin-bottom: -50px;
+        margin-left: -60px;
+      }
+    }
+    .imgs_container {
+      width: 45%;
+      height: 100%;
+      @include dis-grid(repeat(7, 1fr), repeat(7, 1fr));
+      .background_img {
+        grid-column: 1/8;
+        grid-row: 1/8;
+        width: 90%;
+        margin: auto;
+        // img {
+        //   width: 100%;
+        //   height: 100%;
+        // }
+      }
+      .top {
+        grid-column: 1/6;
+        grid-row: 1/5;
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+        img {
+          @include img-uploaded(rotate(-10deg));
+        }
+      }
+      .center {
+        grid-column: 3/8;
+        grid-row: 2/6;
+        justify-self: flex-end;
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+        img {
+          @include img-uploaded(rotate(10deg));
+        }
+      }
+      .bottom {
+        grid-column: 1/6;
+        grid-row: 4/8;
+        width: 70%;
+        height: 100%;
+        border-radius: 5px;
+        img {
+          @include img-uploaded(rotate(-20deg));
+        }
+      }
+    }
+    .text_container {
+      width: 25%;
+      height: 100%;
+      @include dis-grid(1fr, repeat(7, 1fr));
+      .text {
+        grid-column: 1/2;
+        grid-row: 3/7;
+        width: 80%;
+        justify-self: center;
+        .dear {
+          color: $dear-font-color;
+          font-size: $dear-font-size;
+          font-weight: $dear-font-weight;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        .msg {
+          width: 100%;
+          color: $msg-font-color;
+          font-size: $msg-font-size;
+          font-weight: $msg-font-weight;
+          margin-bottom: 10px;
+          text-align: center;
+          @extend %ellipsis-text;
+        }
+      }
+      .background {
+        grid-row: 6/8;
+        grid-column: 1/2;
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 250px;
+        height: 270px;
+      }
+    }
+  }
+  .down {
+    width: 100%;
+    margin: auto;
+    .color {
+      @include dis-flex(row, space-evenly, center);
+      width: 70%;
+      margin: auto;
+      .radio_color_1,
+      .radio_color_2,
+      .radio_color_3,
+      .radio_color_4,
+      .radio_color_5,
+      .radio_color_6 {
+        @extend %inputs-radio-color-flower;
+        width: 70px; /* Adjust the width and height of the custom radio */
+        height: 70px;
+        border-radius: 20px; /* Creates a circular shape */
+        margin-right: 10px;
+        padding: 20px;
+        cursor: pointer;
+        &:checked {
+          content: url("../../imgs/icons/dark check.png");
+        }
+      }
+      .radio_color_1 {
+        background-color: #9ac482;
+      }
+      .radio_color_2 {
+        background-color: #ee92a9;
+      }
+      .radio_color_3 {
+        background-color: #6b3c47;
+      }
+      .radio_color_4 {
+        background-color: #92dcee;
+      }
+      .radio_color_5 {
+        background-color: #eec185;
+      }
+      .radio_color_6 {
+        background-color: #9b7749;
+      }
+    }
+    .choose_color {
+      @extend %inputs-color;
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+  .flower {
+    width: 92%;
+    margin: auto;
+    @include dis-flex(row, flex-start, center);
+    flex-wrap: wrap;
+    gap: 30px;
+    .radio_flower_1,
+    .radio_flower_2,
+    .radio_flower_3,
+    .radio_flower_4,
+    .radio_flower_5,
+    .radio_flower_6,
+    .radio_flower_7,
+    .radio_flower_8,
+    .radio_flower_9,
+    .radio_flower_10 {
+      @extend %inputs-radio-color-flower;
+      @include border(2px, solid, #c09aa5, 50px);
+      width: 200px; /* Adjust the width and height of the custom radio */
+      height: 300px;
+      margin-right: 10px;
+      padding: 20px;
+      cursor: pointer;
+      &:checked {
+        background-color: #c09aa5;
+      }
+    }
+    .radio_flower_1 {
+      @include pick-radio-flower(url("../../imgs/single flower/1.png"));
+    }
+    .radio_flower_2 {
+      @include pick-radio-flower(url("../../imgs/single flower/2.png"));
+    }
+    .radio_flower_3 {
+      @include pick-radio-flower(url("../../imgs/single flower/3.png"));
+    }
+    .radio_flower_4 {
+      @include pick-radio-flower(url("../../imgs/single flower/4.png"));
+    }
+    .radio_flower_5 {
+      @include pick-radio-flower(url("../../imgs/single flower/5.png"));
+    }
+    .radio_flower_6 {
+      @include pick-radio-flower(url("../../imgs/single flower/6.png"));
+    }
+    .radio_flower_7 {
+      @include pick-radio-flower(url("../../imgs/single flower/7.png"));
+    }
+    .radio_flower_8 {
+      @include pick-radio-flower(url("../../imgs/single flower/8.png"));
+    }
+    .radio_flower_9 {
+      @include pick-radio-flower(url("../../imgs/single flower/9.png"));
+    }
+    .radio_flower_10 {
+      @include pick-radio-flower(url("../../imgs/single flower/10.png"));
+    }
+  }
+  .images {
+    @include dis-flex(row, space-evenly, center);
+    div {
+      @include dis-flex(column, flex-start, flex-start);
+      gap: 20px;
+    }
+    label {
+      font-size: $label-font-size;
+      color: $label-font-color;
+      font-weight: $label-font-weight;
+    }
+    input {
+      font-size: $input-font-size;
+      color: $input-font-color;
+      font-weight: $input-font-weight;
+      outline: none;
+      @include border(2px, solid, #c09aa5, 10px);
+      cursor: pointer;
+      box-shadow: 0px 0px 10px #c09aa5;
+      &::-webkit-file-upload-button {
+        color: $input-font-color;
+        font-size: $input-font-size;
+        font-weight: $input-font-weight;
+        background: rgba(255, 255, 255, 0.2);
+        @include border(1px, solid, #c09aa5, 10px);
+        padding: 8px 20px;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px #c09aa5;
+        margin-right: 10px;
+        &:hover {
+          background: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+  .text_enter {
+    @include dis-flex(column, center, center);
+    gap: 20px;
+    label {
+      font-size: $label-font-size;
+      color: $label-font-color;
+      font-weight: $label-font-weight;
+      align-self: flex-start;
+      margin-left: 150px;
+    }
+    textarea {
+      outline: none;
+      @include border(2px, solid, #c09aa5, 25px);
+      max-width: 80%;
+      max-height: 30vh;
+      min-width: 80%;
+      min-height: 30vh;
+      resize: none;
+      padding: 8px 20px;
+      font-size: $large-font-size;
+      color: $input-font-color;
+      background: rgba(255, 255, 255, 0.2);
+      &:focus {
+        outline: none;
+        @include border(2px, solid, #c09aa5, 25px);
+        box-shadow: 0px 0px 10px #c09aa5;
+      }
+    }
+    // button {
+    //   padding: 8px 20px;
+    //   outline: none;
+    //   border: 2px solid #c09aa5;
+    //   border-radius: 15px;
+    //   color: #5c162e;
+    //   background-color: transparent;
+    //   font-size: 15px;
+    //   font-weight: bolder;
+    //   cursor: pointer;
+    //   align-self: flex-end;
+    //   margin-right: 150px;
+    //   &:hover {
+    //     background-color: #5c162e;
+    //     color: #c09aa5;
+    //     border: 2px solid #5c162e;
+    //   }
+    // }
+    .options {
+      @include dis-flex(row, space-between, center);
+      width: 83%;
+      .head,
+      .text_color {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        @include dis-flex(column, center, flex-start);
+        gap: 20px;
+        label {
+          margin-left: 0px;
+        }
+        input[type="text"] {
+          background-color: rgba(255, 255, 255, 0.2);
+          outline: none;
+          @include border(2px, solid, #c09aa5, 15px);
+          font-size: 20px;
+          padding: 8px 20px;
+          color: #5c162e;
+          font-weight: bolder;
+        }
+        input[type="color"] {
+          @extend %inputs-color;
+          width: 70px;
+          height: 50px;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .next_priv {
+    @include dis-flex(row, center, center);
+    gap: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .priv {
+      a {
+        @include dis-flex(row, space-between, center);
+        text-decoration: none;
+        color: #c09aa5;
+        font-size: 15px;
+        font-weight: 700;
+        img {
+          width: 25px;
+        }
+      }
+    }
+    .next {
+      a {
+        @include dis-flex(row, space-between, center);
+        text-decoration: none;
+        color: #5c162e;
+        font-size: 15px;
+        font-weight: 700;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: flex;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+@import "../abstracts/_mixins.scss";
+
+// submit btn
+.submit_btn {
+    padding: $btn-font-padding-top $btn-font-padding-left;
+    background-color: transparent;
+    @include border(2px, solid, #c09aa5, 15px);
+    outline: none;
+    color: $btn-font-color;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 150px;
+    &:hover {
+      background-color: #5c162e;
+      color: #c09aa5;
+      border: 2px solid #5c162e;
+    }
+}
+
+// ok btn in msg
+.ok_btn {
+  padding: $btn-font-padding-top $btn-font-padding-left;
+  background-color: transparent;
+  @include border(2px, solid, #c09aa5, 25px);
+  color: $btn-font-color;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-right: 30px;
+  &:hover {
+    color: #c09aa5;
+    background-color: #5c162e;
+    border: 2px solid #5c162e;
+  }
+}

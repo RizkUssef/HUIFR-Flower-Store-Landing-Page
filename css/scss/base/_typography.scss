@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+// Headings Styles
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+  font-family: $font-primary;
+  color: $h1-font-color;
+//   line-height: $heading-line-height;
+}
+
+p{
+    font-size: $msg-font-size;
+    font-weight: $msg-font-weight;
+    font-family: $font-primary;
+    color: $msg-font-color;
+    // line-height: $heading-line-height;
+}
+
+.next_btn{
+  color: $label-font-color;
+}

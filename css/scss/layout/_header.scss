@@ -1,0 +1,10 @@
+@import "../abstracts/variables";
+
+header {
+  position: fixed;
+  img {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: $logo-width;
+  }
+}

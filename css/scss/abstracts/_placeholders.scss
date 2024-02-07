@@ -1,0 +1,57 @@
+%clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Example placeholder for text truncation with an ellipsis
+%ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// input color remove
+%inputs-color{
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  &:focus{
+    outline: none;
+  }
+  &::-webkit-color-swatch-wrapper {
+    padding: 0; 
+  }
+
+  &::-webkit-color-swatch {
+    border: none;
+    border-radius: 20px; /* Optional: Add border radius */
+    border: 2px solid #c09aa5;
+  }
+}
+
+// input radio remove
+%inputs-radio-color-flower{
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:focus{
+    outline: none;
+  }
+}
+
+// input text and text area
+%inputs-text-textarea{
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+
+// input fil
