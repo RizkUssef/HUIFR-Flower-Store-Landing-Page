@@ -20,9 +20,52 @@ p{
     font-weight: $msg-font-weight;
     font-family: $font-primary;
     color: $msg-font-color;
-    // line-height: $heading-line-height;
 }
 
 .next_btn{
   color: $label-font-color;
+}
+
+.all-headlines{
+  font-size: calc($h1-font-size - 10px);
+  font-weight: $h1-font-weight;
+  font-family: $font-primary;
+  color: $h1-font-color;
+}
+
+.all-descriptions{
+  font-size: calc($msg-font-size - 4px);
+  font-weight: $msg-font-weight;
+  font-family: $font-primary;
+  color: $primary-color;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1350px) {
+  .all-headlines{
+    font-size: calc($h1-font-size + 20px);
+  }
+  
+  .all-descriptions{
+    font-size: $msg-font-size;
+  }
+}
+
+@media screen and (min-width: 1351px) and (max-width: 1500px) {
+  .all-headlines{
+    font-size: calc($h1-font-size + 20px);
+  }
+  
+  .all-descriptions{
+    font-size: $msg-font-size;
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  .all-headlines{
+    font-size: calc($h1-font-size + 20px);
+  }
+  
+  .all-descriptions{
+    font-size: $msg-font-size;
+  }
 }

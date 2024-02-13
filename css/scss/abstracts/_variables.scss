@@ -23,15 +23,15 @@ $font-weight-bolder: bolder;
 // Headings
 $h1-font-size: 40px;
 $h1-font-weight: $font-weight-bolder;
-$h1-font-color: #5c162e;
+$h1-font-color: $primary-color;
 
 
 // dear
 $dear-font-size: 25px;
 $dear-font-weight: $font-weight-bolder;
-$dear-font-color: #5c162e;
+$dear-font-color: $primary-color;
 
-$btn-font-color: #5c162e;
+$btn-font-color: $primary-color;
 $btn-font-padding-top: 8px;
 $btn-font-padding-left: 20px;
 $btn-font-size: 15px;
@@ -40,16 +40,16 @@ $btn-font-weight: bolder;
 // msg
 $msg-font-size: 20px;
 $msg-font-weight: $font-weight-bolder;
-$msg-font-color: #c09aa5;
+$msg-font-color: $secondary-color;
 
 // form labels inputs
 $label-font-size: 20px;
 $label-font-weight: $font-weight-bolder;
-$label-font-color: #5c162e;
+$label-font-color: $primary-color;
 
 $input-font-size: 15px;
 $input-font-weight: $font-weight-bolder;
-$input-font-color: #5c162e;
+$input-font-color: $primary-color;
 
 
 // color radio
@@ -61,7 +61,7 @@ $flower-radio-width:200px;
 $flower-radio-height:300px;
 $flower-radio-border-width :2px;
 $flower-radio-border-type :solid;
-$flower-radio-border-color :#c09aa5;
+$flower-radio-border-color :$secondary-color;
 
 
 

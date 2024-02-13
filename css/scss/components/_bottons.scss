@@ -5,7 +5,7 @@
 .submit_btn {
     padding: $btn-font-padding-top $btn-font-padding-left;
     background-color: transparent;
-    @include border(2px, solid, #c09aa5, 15px);
+    @include border(2px, solid, $secondary-color, 15px);
     outline: none;
     color: $btn-font-color;
     font-size: $btn-font-size;
@@ -14,9 +14,9 @@
     align-self: flex-end;
     margin-right: 150px;
     &:hover {
-      background-color: #5c162e;
-      color: #c09aa5;
-      border: 2px solid #5c162e;
+      background-color: $primary-color;
+      color: $secondary-color;
+      border: 2px solid $primary-color;
     }
 }
 
@@ -24,7 +24,7 @@
 .ok_btn {
   padding: $btn-font-padding-top $btn-font-padding-left;
   background-color: transparent;
-  @include border(2px, solid, #c09aa5, 25px);
+  @include border(2px, solid, $secondary-color, 25px);
   color: $btn-font-color;
   font-size: $btn-font-size;
   font-weight: $btn-font-weight;
@@ -32,8 +32,42 @@
   align-self: flex-end;
   margin-right: 30px;
   &:hover {
-    color: #c09aa5;
-    background-color: #5c162e;
-    border: 2px solid #5c162e;
+    color: $secondary-color;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
+  }
+}
+
+.landing-primary-links{
+  padding: $btn-font-padding-top $btn-font-padding-left;
+  background-color: $primary-color;
+  @include border(2px, solid, $primary-color, 15px);
+  color: $btn-font-color;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  cursor: pointer;
+  align-self: flex-end;
+  color: $secondary-color;
+  &:hover {
+    color: $primary-color;
+    background-color: $secondary-color;
+    border: 2px solid $secondary-color;
+  }
+}
+
+.landing-secondary-links{
+  padding: $btn-font-padding-top $btn-font-padding-left;
+  background-color: $secondary-color;
+  @include border(2px, solid, $secondary-color, 15px);
+  color: $btn-font-color;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  cursor: pointer;
+  align-self: flex-end;
+  color: $primary-color;
+  &:hover {
+    color: $secondary-color;
+    background-color: $primary-color;
+    border: 2px solid $primary-color;
   }
 }

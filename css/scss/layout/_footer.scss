@@ -3,36 +3,38 @@
 @import "../abstracts/placeholders";
 
 .footer {
-    @include dis-flex(row,space-between,center);
-
+  @include dis-flex(row, space-between, center);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  backdrop-filter: blur(3px);
+  padding-top: 10px;
   .left_flower_bg {
     width: 100px;
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('../../../imgs/backshadow images/footer_left.svg');
+    background-image: url("../../../imgs/backshadow images/footer_left.svg");
   }
   .footer_cont {
-    @include dis-flex(column,center,center);
+    @include dis-flex(column, center, center);
     gap: 20px;
     .logo {
-        width: 40px;
-        img{
-            width: 100%;
-        }
+      width: 40px;
+      img {
+        width: 100%;
+      }
     }
-    .text{
-    @include dis-flex(row,center,center);
-    gap: 5px;
-        img{
-            width: 15px;
-        }
-        p{
-            color: $primary-color;
-            font-size: 10px;
-            width: 62px;
-        }
+    .text {
+      @include dis-flex(row, center, center);
+      gap: 5px;
+      img {
+        width: 15px;
+      }
+      p {
+        color: $primary-color;
+        font-size: 10px;
+        width: 62px;
+      }
     }
   }
   .right_flower_bg {
@@ -41,6 +43,99 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-image: url('../../../imgs/backshadow images/footer_right.svg');
+    background-image: url("../../../imgs/backshadow images/footer_right.svg");
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1350px) {
+  .footer {
+    .left_flower_bg {
+      width: 150px;
+      height: 150px;
+    }
+    .footer_cont {
+      .logo {
+        width: 60px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        img {
+          width: 15px;
+        }
+        p {
+          color: $primary-color;
+          font-size: 16px;
+          width: 100px;
+        }
+      }
+    }
+    .right_flower_bg {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+@media screen and (min-width: 1351px) and (max-width: 1500px) {
+  .footer {
+    .left_flower_bg {
+      width: 180px;
+      height: 180px;
+    }
+    .footer_cont {
+      .logo {
+        width: 70px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        img {
+          width: 15px;
+        }
+        p {
+          color: $primary-color;
+          font-size: 20px;
+          width: fit-content;
+        }
+      }
+    }
+    .right_flower_bg {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}
+
+@media screen and (min-width: 1501px) and (max-width: 2000px) {
+  .footer {
+    .left_flower_bg {
+      width: 180px;
+      height: 180px;
+    }
+    .footer_cont {
+      .logo {
+        width: 70px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        img {
+          width: 15px;
+        }
+        p {
+          color: $primary-color;
+          font-size: 20px;
+          width: fit-content;
+        }
+      }
+    }
+    .right_flower_bg {
+      width: 180px;
+      height: 180px;
+    }
   }
 }
