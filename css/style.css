@@ -60,6 +60,13 @@ p {
   color: #c09aa5;
 }
 
+.about_p {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Fredoka", sans-serif;
+  color: #5c162e;
+}
+
 .next_btn {
   color: #5c162e;
 }
@@ -558,6 +565,14 @@ p {
     height: 180px;
   }
 }
+.reviews_section .reviews .cust_review .bottom .rev_text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+
 .headline_section {
   height: 100vh;
   background-image: url("../../../imgs/bgs/landing intro.png");
@@ -588,37 +603,259 @@ p {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
-.feature_section .background_flower {
+.feature_section .background_flower_1 {
   width: 600px;
   height: 600px;
-  grid-column: 1/1;
-  grid-row: 1/1;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
-.feature_section .background_flower img {
+.feature_section .background_flower_1 img {
   width: 100%;
   height: 100%;
 }
-.feature_section .text {
-  grid-column: 1/1;
-  grid-row: 1/1;
-  place-self: center;
+.feature_section .text_1 {
   margin-left: 50px;
+  place-self: center;
   width: 600px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
 }
-.feature_section .info_img {
-  grid-column: 2/3;
-  grid-row: 1/1;
+.feature_section .info_img_1 {
   place-self: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
 }
-.feature_section .info_img img {
+.feature_section .info_img_1 img {
   width: 500px;
   height: 500px;
   border-radius: 50px;
+}
+.feature_section .background_flower_2 {
+  width: 600px;
+  height: 600px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  place-self: end;
+}
+.feature_section .background_flower_2 img {
+  padding-left: 150px;
+}
+.feature_section .text_2 {
+  place-self: center;
+  width: 600px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.feature_section .info_img_2 {
+  place-self: center;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+.feature_section .info_img_2 img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+}
+.feature_section .background_flower_3 {
+  width: 600px;
+  height: 600px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  place-self: start;
+}
+.feature_section .text_3 {
+  margin-left: 50px;
+  place-self: center;
+  width: 600px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.feature_section .info_img_3 {
+  place-self: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.feature_section .info_img_3 img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+}
+
+.about_us_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 50px;
+  margin: 50px 0px;
+}
+.about_us_section .headline {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: center;
+  align-self: start;
+}
+.about_us_section .bg_image_1 {
+  width: 700px;
+  height: 700px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: end;
+}
+.about_us_section .img_cont_1 {
+  width: 600px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: center;
+  margin-top: 100px;
+}
+.about_us_section .img_cont_1 img {
+  border-radius: 50px;
+}
+.about_us_section .text_desc_1 {
+  width: 500px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: center;
+}
+.about_us_section .bg_image_2 {
+  width: 700px;
+  height: 700px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  place-self: start;
+  padding-right: 100px;
+}
+.about_us_section .img_cont_2 {
+  width: 600px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  place-self: center;
+  margin-top: 100px;
+}
+.about_us_section .img_cont_2 img {
+  border-radius: 50px;
+}
+.about_us_section .text_desc_2 {
+  width: 500px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  place-self: center;
+}
+
+.reviews_section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  row-gap: 50px;
+  margin: 50px 0px;
+}
+.reviews_section .headline {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: center;
+  align-self: start;
+}
+.reviews_section .bg_image {
+  width: 700px;
+  height: 700px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  place-self: center;
+}
+.reviews_section .reviews {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.reviews_section .reviews .cust_review {
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+  border-radius: 50px;
+}
+.reviews_section .reviews .cust_review .top {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.reviews_section .reviews .cust_review .top .name {
+  font-size: 30px;
+}
+.reviews_section .reviews .cust_review .top img {
+  width: 70px;
+}
+.reviews_section .reviews .cust_review .bottom {
+  width: 90%;
+}
+.reviews_section .reviews .cust_review .bottom .rev_text {
+  width: 100%;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {

@@ -21,37 +21,152 @@
 }
 .feature_section{
   @include dis-grid(repeat(2,1fr),repeat(3,1fr));
-  .background_flower{
-    width: 600px;
-    height: 600px;
-    grid-column: 1/1;
-    grid-row: 1/1;
+  .background_flower_1{
+    @include feature_section_background_flowers(1,1,1,1);
     img{
       width: 100%;
       height: 100%;
     }
   }
-  .text{
-    grid-column: 1/1;
-    grid-row: 1/1;
-    place-self: center;
+  .text_1{
     margin-left: 50px;
-    width: 600px;
+    @include feature_section_texts(1,1,1,1);
     @include dis-flex(column, center, flex-start);
     gap: 20px;
-
   }
-  .info_img{
-    grid-column: 2/3;
-    grid-row: 1/1;
-    place-self: center;
+  .info_img_1{
+    @include feature_section_images(2,3,1,1);
+  }
+  .background_flower_2{
+    @include feature_section_background_flowers(2,4,2,2);
+    place-self: end;
     img{
-      width: 500px;
-      height: 500px;
+      padding-left: 150px
+    }
+  }
+  .text_2{
+    @include feature_section_texts(2,4,2,2);
+    @include dis-flex(column, center, flex-start);
+    gap: 20px;
+  }
+  .info_img_2{
+    @include feature_section_images(1,1,2,2);
+  }
+  .background_flower_3{
+    @include feature_section_background_flowers(1,1,3,4);
+    place-self: start;
+  }
+  .text_3{
+    margin-left: 50px;
+    @include feature_section_texts(1,1,3,4);
+    @include dis-flex(column, center, flex-start);
+    gap: 20px;
+  }
+  .info_img_3{
+    @include feature_section_images(2,3,3,4);
+  }
+}
+.about_us_section{
+  @include dis-grid(repeat(2,1fr),repeat(2,1fr));
+  row-gap: 50px;
+  margin: 50px 0px;
+  .headline{
+    @include about_position(1,3,1,1);
+    place-self: center;
+    align-self: start;
+  }
+  .bg_image_1{
+    width: 700px;
+    height: 700px;
+    @include about_position(2,3,1,1);
+    place-self: end;
+  }
+  .img_cont_1{
+    width: 600px;
+    @include about_position(1,2,1,1);
+    place-self: center;
+    margin-top: 100px;
+    img{
       border-radius: 50px;
     }
   }
+  .text_desc_1{
+    width: 500px;
+    @include about_position(2,3,1,1);
+    place-self: center;
+  }
+  .bg_image_2{
+    width: 700px;
+    height: 700px;
+    @include about_position(1,2,2,3);
+    place-self: start;
+    padding-right: 100px;
+  }
+  .img_cont_2{
+    width: 600px;
+    @include about_position(2,3,2,3);
+    place-self: center;
+    margin-top: 100px;
+    img{
+      border-radius: 50px;
+    }
+  }
+  .text_desc_2{
+    width: 500px;
+    @include about_position(1,2,2,3);
+    place-self: center;
+  }
 }
+.reviews_section{
+  @include dis-grid(repeat(1,1fr),repeat(1,1fr));
+  row-gap: 50px;
+  margin: 50px 0px;
+  .headline{
+    @include about_position(1,3,1,1);
+    place-self: center;
+    align-self: start;
+  }
+  .bg_image{
+    width: 700px;
+    height: 700px;
+    @include about_position(1,1,1,1);
+    place-self: center;
+  }
+  .reviews{
+    @include about_position(1,1,1,1);
+    @include dis-flex(row, center, center);
+    gap: 50px;
+    .cust_review{
+      background-color: rgba($color: #ffffff, $alpha: 0.3);
+      backdrop-filter: blur(3px);
+      width: 400px;
+      @include dis-flex(column, center, center);
+      gap: 20px;
+      padding: 20px 0px;
+      border-radius: 50px;
+      .top{
+        width: 90%;
+        @include dis-flex(row, flex-start, center);
+        gap: 30px;
+        .name{
+          font-size: 30px;
+        }
+        img{
+          width: 70px;
+        }
+      }
+      .bottom{
+        width: 90%;
+        .rev_text{
+          width: 100%;
+          @extend %ellipsis-text;
+        }
+      }
+    }
+
+  }
+}
+
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   .headline_section {

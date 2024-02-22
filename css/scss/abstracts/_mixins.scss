@@ -40,3 +40,41 @@
     color: $secondary-color;
     background-color: $primary-color;
 }
+
+@mixin feature_section_background_flowers($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    width: 600px;
+    height: 600px;
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    grid-row-start: $grid-row-start;
+    grid-row-end: $grid-row-end;
+}
+
+@mixin feature_section_texts($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    place-self: center;
+    width: 600px;
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    grid-row-start: $grid-row-start;
+    grid-row-end: $grid-row-end;
+}
+
+@mixin feature_section_images($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    place-self: center;
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    grid-row-start: $grid-row-start;
+    grid-row-end: $grid-row-end;
+    img{
+        width: 500px;
+        height: 500px;
+        border-radius: 50px;
+      }
+}
+
+@mixin about_position($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    grid-column-start: $grid-column-start;
+    grid-column-end: $grid-column-end;
+    grid-row-start: $grid-row-start;
+    grid-row-end: $grid-row-end;
+}
