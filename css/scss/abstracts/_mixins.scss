@@ -42,8 +42,13 @@
 }
 
 @mixin feature_section_background_flowers($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
-    width: 600px;
-    height: 600px;
+    @media screen and (min-width: 1025px) and (max-width: 1350px){
+        width: 80%;
+    }
+    @media screen and (min-width: 1351px) and (max-width: 2000px){
+        width: 70%;
+    }
+    width: 100%;
     grid-column-start: $grid-column-start;
     grid-column-end: $grid-column-end;
     grid-row-start: $grid-row-start;
@@ -51,8 +56,14 @@
 }
 
 @mixin feature_section_texts($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    @media screen and (min-width: 1025px) and (max-width: 1350px){
+        width: 80%;
+    }
+    @media screen and (min-width: 1351px) and (max-width: 2000px){
+        width: 80%;
+    }
     place-self: center;
-    width: 600px;
+    width: 90%;
     grid-column-start: $grid-column-start;
     grid-column-end: $grid-column-end;
     grid-row-start: $grid-row-start;
@@ -60,14 +71,19 @@
 }
 
 @mixin feature_section_images($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
+    @media screen and (min-width: 1025px) and (max-width: 1350px){
+        width: 80%;
+    }
+    @media screen and (min-width: 1351px) and (max-width: 2000px){
+        width: 70%;
+    }
     place-self: center;
     grid-column-start: $grid-column-start;
     grid-column-end: $grid-column-end;
     grid-row-start: $grid-row-start;
     grid-row-end: $grid-row-end;
+    width: 95%;
     img{
-        width: 500px;
-        height: 500px;
         border-radius: 50px;
       }
 }

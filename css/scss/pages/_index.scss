@@ -19,124 +19,119 @@
     border-radius: 25px;
   }
 }
-.feature_section{
-  @include dis-grid(repeat(2,1fr),repeat(3,1fr));
-  .background_flower_1{
-    @include feature_section_background_flowers(1,1,1,1);
-    img{
-      width: 100%;
-      height: 100%;
-    }
+.feature_section {
+  @include dis-grid(repeat(1, 1fr), repeat(6, 1fr));
+  .background_flower_1 {
+    @include feature_section_background_flowers(1, 1, 1, 1);
+    place-self: center;
   }
-  .text_1{
-    margin-left: 50px;
-    @include feature_section_texts(1,1,1,1);
+  .text_1 {
+    @include feature_section_texts(1, 1, 1, 1);
     @include dis-flex(column, center, flex-start);
     gap: 20px;
   }
-  .info_img_1{
-    @include feature_section_images(2,3,1,1);
+  .info_img_1 {
+    @include feature_section_images(1, 1, 2, 3);
+    width: 95%;
   }
-  .background_flower_2{
-    @include feature_section_background_flowers(2,4,2,2);
+  .background_flower_2 {
+    @include feature_section_background_flowers(1, 1, 3, 4);
     place-self: end;
-    img{
-      padding-left: 150px
-    }
   }
-  .text_2{
-    @include feature_section_texts(2,4,2,2);
+  .text_2 {
+    @include feature_section_texts(1, 1, 3, 4);
     @include dis-flex(column, center, flex-start);
     gap: 20px;
   }
-  .info_img_2{
-    @include feature_section_images(1,1,2,2);
+  .info_img_2 {
+    @include feature_section_images(1, 1, 4, 5);
+    width: 95%;
   }
-  .background_flower_3{
-    @include feature_section_background_flowers(1,1,3,4);
+  .background_flower_3 {
+    @include feature_section_background_flowers(1, 1, 5, 6);
     place-self: start;
   }
-  .text_3{
-    margin-left: 50px;
-    @include feature_section_texts(1,1,3,4);
+  .text_3 {
+    @include feature_section_texts(1, 1, 5, 6);
     @include dis-flex(column, center, flex-start);
     gap: 20px;
   }
-  .info_img_3{
-    @include feature_section_images(2,3,3,4);
+  .info_img_3 {
+    @include feature_section_images(1, 1, 6, 7);
+    width: 95%;
   }
 }
-.about_us_section{
-  @include dis-grid(repeat(2,1fr),repeat(2,1fr));
+.about_us_section {
+  @include dis-grid(repeat(2, 1fr), repeat(2, 1fr));
   row-gap: 50px;
   margin: 50px 0px;
-  .headline{
-    @include about_position(1,3,1,1);
+  .headline {
+    @include about_position(1, 3, 1, 1);
     place-self: center;
     align-self: start;
   }
-  .bg_image_1{
+  .bg_image_1 {
     width: 700px;
     height: 700px;
-    @include about_position(2,3,1,1);
+    @include about_position(2, 3, 1, 1);
     place-self: end;
   }
-  .img_cont_1{
+  .img_cont_1 {
     width: 600px;
-    @include about_position(1,2,1,1);
+    @include about_position(1, 2, 1, 1);
     place-self: center;
     margin-top: 100px;
-    img{
+    img {
       border-radius: 50px;
     }
   }
-  .text_desc_1{
+  .text_desc_1 {
     width: 500px;
-    @include about_position(2,3,1,1);
+    @include about_position(2, 3, 1, 1);
     place-self: center;
   }
-  .bg_image_2{
+  .bg_image_2 {
     width: 700px;
     height: 700px;
-    @include about_position(1,2,2,3);
+    @include about_position(1, 2, 2, 3);
     place-self: start;
     padding-right: 100px;
   }
-  .img_cont_2{
+  .img_cont_2 {
     width: 600px;
-    @include about_position(2,3,2,3);
+    @include about_position(2, 3, 2, 3);
     place-self: center;
     margin-top: 100px;
-    img{
+    img {
       border-radius: 50px;
     }
   }
-  .text_desc_2{
+  .text_desc_2 {
     width: 500px;
-    @include about_position(1,2,2,3);
+    @include about_position(1, 2, 2, 3);
     place-self: center;
   }
 }
-.reviews_section{
-  @include dis-grid(repeat(1,1fr),repeat(1,1fr));
+.reviews_section {
+  @include dis-grid(repeat(1, 1fr), repeat(1, 1fr));
   row-gap: 50px;
   margin: 50px 0px;
-  .headline{
-    @include about_position(1,3,1,1);
+  .headline {
+    @include about_position(1, 3, 1, 1);
     place-self: center;
     align-self: start;
   }
-  .bg_image{
+  .bg_image {
     width: 700px;
     height: 700px;
-    @include about_position(1,1,1,1);
+    @include about_position(1, 1, 1, 1);
     place-self: center;
   }
-  .reviews{
-    @include about_position(1,1,1,1);
+  .reviews {
+    @include about_position(1, 1, 1, 1);
     @include dis-flex(row, center, center);
     gap: 50px;
-    .cust_review{
+    .cust_review {
       background-color: rgba($color: #ffffff, $alpha: 0.3);
       backdrop-filter: blur(3px);
       width: 400px;
@@ -144,45 +139,48 @@
       gap: 20px;
       padding: 20px 0px;
       border-radius: 50px;
-      .top{
+      .top {
         width: 90%;
         @include dis-flex(row, flex-start, center);
         gap: 30px;
-        .name{
+        .name {
           font-size: 30px;
         }
-        img{
+        img {
           width: 70px;
         }
       }
-      .bottom{
+      .bottom {
         width: 90%;
-        .rev_text{
+        .rev_text {
           width: 100%;
           @extend %ellipsis-text;
         }
       }
     }
-
   }
 }
-.wedding{
-  background-image: url('../../../imgs/bgs/3.jpg');
+.wedding {
+  background-image: url("../../../imgs/bgs/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  &::before{
+  &::before {
     position: absolute;
     content: "";
-    background: linear-gradient(90deg, rgba(239,223,227,0.6) 0%, rgba(189,155,166,0.45) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(239, 223, 227, 0.6) 0%,
+      rgba(189, 155, 166, 0.45) 100%
+    );
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 9;
   }
-  .info{
+  .info {
     position: relative;
     z-index: 10;
     padding: 50px 0px;
@@ -204,6 +202,44 @@
       align-self: flex-end;
     }
   }
+  .feature_section {
+    @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
+    .background_flower_1 {
+      @include feature_section_background_flowers(1, 1, 1, 1);
+    }
+    .text_1 {
+      @include feature_section_texts(1, 1, 1, 1);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_1 {
+      @include feature_section_images(2, 3, 1, 1);
+    }
+    .background_flower_2 {
+      @include feature_section_background_flowers(2, 4, 2, 2);
+      place-self: end;
+    }
+    .text_2 {
+      @include feature_section_texts(2, 4, 2, 2);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_2 {
+      @include feature_section_images(1, 1, 2, 2);
+    }
+    .background_flower_3 {
+      @include feature_section_background_flowers(1, 1, 3, 4);
+      place-self: start;
+    }
+    .text_3 {
+      @include feature_section_texts(1, 1, 3, 4);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_3 {
+      @include feature_section_images(2, 3, 3, 4);
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
@@ -215,6 +251,45 @@
       border-top-left-radius: 25px;
       border-bottom-left-radius: 25px;
       align-self: flex-end;
+    }
+  }
+  .feature_section {
+    @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
+    .background_flower_1 {
+      @include feature_section_background_flowers(1, 1, 1, 1);
+      place-self: start;
+    }
+    .text_1 {
+      @include feature_section_texts(1, 1, 1, 1);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_1 {
+      @include feature_section_images(2, 3, 1, 1);
+    }
+    .background_flower_2 {
+      @include feature_section_background_flowers(2, 4, 2, 2);
+      place-self: end;
+    }
+    .text_2 {
+      @include feature_section_texts(2, 4, 2, 2);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_2 {
+      @include feature_section_images(1, 1, 2, 2);
+    }
+    .background_flower_3 {
+      @include feature_section_background_flowers(1, 1, 3, 4);
+      place-self: start;
+    }
+    .text_3 {
+      @include feature_section_texts(1, 1, 3, 4);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_3 {
+      @include feature_section_images(2, 3, 3, 4);
     }
   }
 }
@@ -230,4 +305,92 @@
       align-self: flex-end;
     }
   }
+  .feature_section {
+    @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
+    .background_flower_1 {
+      @include feature_section_background_flowers(1, 1, 1, 1);
+      place-self: start;
+    }
+    .text_1 {
+      @include feature_section_texts(1, 1, 1, 1);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_1 {
+      @include feature_section_images(2, 3, 1, 1);
+    }
+    .background_flower_2 {
+      @include feature_section_background_flowers(2, 4, 2, 2);
+      place-self: end;
+    }
+    .text_2 {
+      @include feature_section_texts(2, 4, 2, 2);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_2 {
+      @include feature_section_images(1, 1, 2, 2);
+    }
+    .background_flower_3 {
+      @include feature_section_background_flowers(1, 1, 3, 4);
+      place-self: start;
+    }
+    .text_3 {
+      @include feature_section_texts(1, 1, 3, 4);
+      @include dis-flex(column, center, flex-start);
+      gap: 20px;
+    }
+    .info_img_3 {
+      @include feature_section_images(2, 3, 3, 4);
+    }
+  }
 }
+
+// ! full
+// .feature_section{
+//   @include dis-grid(repeat(2,1fr),repeat(3,1fr));
+//   .background_flower_1{
+//     @include feature_section_background_flowers(1,1,1,1);
+//     img{
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+//   .text_1{
+//     margin-left: 50px;
+//     @include feature_section_texts(1,1,1,1);
+//     @include dis-flex(column, center, flex-start);
+//     gap: 20px;
+//   }
+//   .info_img_1{
+//     @include feature_section_images(2,3,1,1);
+//   }
+//   .background_flower_2{
+//     @include feature_section_background_flowers(2,4,2,2);
+//     place-self: end;
+//     img{
+//       padding-left: 150px
+//     }
+//   }
+//   .text_2{
+//     @include feature_section_texts(2,4,2,2);
+//     @include dis-flex(column, center, flex-start);
+//     gap: 20px;
+//   }
+//   .info_img_2{
+//     @include feature_section_images(1,1,2,2);
+//   }
+//   .background_flower_3{
+//     @include feature_section_background_flowers(1,1,3,4);
+//     place-self: start;
+//   }
+//   .text_3{
+//     margin-left: 50px;
+//     @include feature_section_texts(1,1,3,4);
+//     @include dis-flex(column, center, flex-start);
+//     gap: 20px;
+//   }
+//   .info_img_3{
+//     @include feature_section_images(2,3,3,4);
+//   }
+// }
