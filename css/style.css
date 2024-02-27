@@ -245,6 +245,7 @@ p {
   background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+  z-index: 10;
 }
 .header img {
   margin-left: 19px;
@@ -856,6 +857,36 @@ p {
 }
 .reviews_section .reviews .cust_review .bottom .rev_text {
   width: 100%;
+}
+
+.wedding {
+  background-image: url("../../../imgs/bgs/3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.wedding::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(90deg, rgba(239, 223, 227, 0.6) 0%, rgba(189, 155, 166, 0.45) 100%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+.wedding .info {
+  position: relative;
+  z-index: 10;
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 60%;
+  margin-left: 100px;
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {

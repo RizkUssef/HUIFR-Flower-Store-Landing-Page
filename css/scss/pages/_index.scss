@@ -166,7 +166,32 @@
 
   }
 }
-
+.wedding{
+  background-image: url('../../../imgs/bgs/3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    background: linear-gradient(90deg, rgba(239,223,227,0.6) 0%, rgba(189,155,166,0.45) 100%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+  .info{
+    position: relative;
+    z-index: 10;
+    padding: 50px 0px;
+    @include dis-flex(column, center, flex-start);
+    gap: 20px;
+    width: 60%;
+    margin-left: 100px;
+  }
+}
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   .headline_section {
