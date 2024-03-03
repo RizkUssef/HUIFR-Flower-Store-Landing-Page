@@ -12,35 +12,41 @@ h1 {
   font-weight: $h1-font-weight;
   font-family: $font-primary;
   color: $h1-font-color;
-//   line-height: $heading-line-height;
+  //   line-height: $heading-line-height;
 }
 
-p{
-    font-size: $msg-font-size;
-    font-weight: $msg-font-weight;
-    font-family: $font-primary;
-    color: $msg-font-color;
+p {
+  font-size: $msg-font-size;
+  font-weight: $msg-font-weight;
+  font-family: $font-primary;
+  color: $msg-font-color;
 }
 
-.about_p{
-  font-size: calc($msg-font-size + 10px);
+.about_p {
+  font-size: $msg-font-size;
   font-weight: $msg-font-weight;
   font-family: $font-primary;
   color: $primary-color;
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    font-size: calc($msg-font-size + 10px);
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    font-size: calc($msg-font-size + 10px);
+  }
 }
 
-.next_btn{
+.next_btn {
   color: $label-font-color;
 }
 
-.all-headlines{
+.all-headlines {
   font-size: calc($h1-font-size - 10px);
   font-weight: $h1-font-weight;
   font-family: $font-primary;
   color: $h1-font-color;
 }
 
-.all-descriptions{
+.all-descriptions {
   font-size: calc($msg-font-size - 4px);
   font-weight: $msg-font-weight;
   font-family: $font-primary;
@@ -48,31 +54,31 @@ p{
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1350px) {
-  .all-headlines{
+  .all-headlines {
     font-size: calc($h1-font-size + 20px);
   }
-  
-  .all-descriptions{
+
+  .all-descriptions {
     font-size: $msg-font-size;
   }
 }
 
 @media screen and (min-width: 1351px) and (max-width: 1500px) {
-  .all-headlines{
+  .all-headlines {
     font-size: calc($h1-font-size + 20px);
   }
-  
-  .all-descriptions{
+
+  .all-descriptions {
     font-size: $msg-font-size;
   }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2000px) {
-  .all-headlines{
+  .all-headlines {
     font-size: calc($h1-font-size + 20px);
   }
-  
-  .all-descriptions{
+
+  .all-descriptions {
     font-size: $msg-font-size;
   }
 }

@@ -62,23 +62,21 @@
   }
 }
 .about_us_section {
-  @include dis-grid(repeat(2, 1fr), repeat(2, 1fr));
-  row-gap: 50px;
+  @include dis-grid(repeat(1, 1fr), repeat(4, 1fr));
   margin: 50px 0px;
   .headline {
-    @include about_position(1, 3, 1, 1);
+    @include about_position(1, 1, 1, 1);
     place-self: center;
     align-self: start;
   }
   .bg_image_1 {
-    width: 700px;
-    height: 700px;
-    @include about_position(2, 3, 1, 1);
+    width: 100%;
+    @include about_position(1, 1, 2, 3);
     place-self: end;
   }
   .img_cont_1 {
-    width: 600px;
-    @include about_position(1, 2, 1, 1);
+    width: 95%;
+    @include about_position(1, 1, 1, 2);
     place-self: center;
     margin-top: 100px;
     img {
@@ -86,20 +84,19 @@
     }
   }
   .text_desc_1 {
-    width: 500px;
-    @include about_position(2, 3, 1, 1);
+    width: 90%;
+    @include about_position(1, 1, 2, 3);
     place-self: center;
   }
   .bg_image_2 {
-    width: 700px;
-    height: 700px;
-    @include about_position(1, 2, 2, 3);
+    width: 100%;
+    @include about_position(1, 1, 4, 5);
     place-self: start;
     padding-right: 100px;
   }
   .img_cont_2 {
-    width: 600px;
-    @include about_position(2, 3, 2, 3);
+    width: 95%;
+    @include about_position(1, 1, 3, 4);
     place-self: center;
     margin-top: 100px;
     img {
@@ -107,34 +104,32 @@
     }
   }
   .text_desc_2 {
-    width: 500px;
-    @include about_position(1, 2, 2, 3);
+    width: 90%;
+    @include about_position(1, 1, 4, 5);
     place-self: center;
   }
 }
 .reviews_section {
-  @include dis-grid(repeat(1, 1fr), repeat(1, 1fr));
-  row-gap: 50px;
+  @include dis-grid(repeat(1, 1fr), 100px 1fr);
   margin: 50px 0px;
   .headline {
-    @include about_position(1, 3, 1, 1);
+    @include about_position(1, 1, 1, 1);
     place-self: center;
     align-self: start;
   }
   .bg_image {
-    width: 700px;
-    height: 700px;
-    @include about_position(1, 1, 1, 1);
+    width: 100%;
+    @include about_position(1, 1, 2, 3);
     place-self: center;
   }
   .reviews {
-    @include about_position(1, 1, 1, 1);
-    @include dis-flex(row, center, center);
+    @include about_position(1, 1, 2, 3);
+    @include dis-flex(column, center, center);
     gap: 50px;
     .cust_review {
       background-color: rgba($color: #ffffff, $alpha: 0.3);
       backdrop-filter: blur(3px);
-      width: 400px;
+      width: 95%;
       @include dis-flex(column, center, center);
       gap: 20px;
       padding: 20px 0px;
@@ -186,8 +181,8 @@
     padding: 50px 0px;
     @include dis-flex(column, center, flex-start);
     gap: 20px;
-    width: 60%;
-    margin-left: 100px;
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -238,6 +233,56 @@
     }
     .info_img_3 {
       @include feature_section_images(2, 3, 3, 4);
+    }
+  }
+  .about_us_section {
+    @include dis-grid(repeat(2, 1fr), repeat(2, 1fr));
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image_1 {
+      width: 70%;
+      @include about_position(2, 3, 1, 1);
+    }
+    .img_cont_1 {
+      @include about_position(1, 2, 1, 1);
+    }
+    .text_desc_1 {
+      @include about_position(2, 3, 1, 1);
+    }
+    .bg_image_2 {
+      @include about_position(1, 2, 2, 3);
+      place-self: auto;
+    }
+    .img_cont_2 {
+      @include about_position(2, 3, 2, 3);
+    }
+    .text_desc_2 {
+      @include about_position(1, 2, 2, 3);
+    }
+  }
+  .reviews_section {
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image {
+      width: 90%;
+      @include about_position(1, 1, 2, 3);
+    }
+    .reviews {
+      @include about_position(1, 1, 2, 3);
+      @include dis-flex(row, center, center);
+      flex-wrap: wrap;
+      .cust_review {
+        width: 360px;
+        @include dis-flex(column, center, center);
+      }
+    }
+  }
+  .wedding{
+    .info{
+      width: 60%;
+      margin-left: 100px;
     }
   }
 }
@@ -292,6 +337,56 @@
       @include feature_section_images(2, 3, 3, 4);
     }
   }
+  .about_us_section {
+    @include dis-grid(repeat(2, 1fr), repeat(2, 1fr));
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image_1 {
+      width: 70%;
+      @include about_position(2, 3, 1, 1);
+    }
+    .img_cont_1 {
+      @include about_position(1, 2, 1, 1);
+    }
+    .text_desc_1 {
+      @include about_position(2, 3, 1, 1);
+    }
+    .bg_image_2 {
+      @include about_position(1, 2, 2, 3);
+      place-self: auto;
+    }
+    .img_cont_2 {
+      @include about_position(2, 3, 2, 3);
+    }
+    .text_desc_2 {
+      @include about_position(1, 2, 2, 3);
+    }
+  }
+  .reviews_section {
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image {
+      width: 50%;
+      @include about_position(1, 1, 2, 3);
+    }
+    .reviews {
+      @include about_position(1, 1, 2, 3);
+      @include dis-flex(row, center, center);
+      flex-wrap: wrap;
+      .cust_review {
+        width: 400px;
+        @include dis-flex(column, center, center);
+      }
+    }
+  }
+  .wedding{
+    .info{
+      width: 60%;
+      margin-left: 100px;
+    }
+  }
 }
 
 @media screen and (min-width: 1351px) and (max-width: 2000px) {
@@ -344,53 +439,59 @@
       @include feature_section_images(2, 3, 3, 4);
     }
   }
+  .about_us_section {
+    @include dis-grid(repeat(2, 1fr), repeat(2, 1fr));
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image_1 {
+      width: 70%;
+      @include about_position(2, 3, 1, 1);
+    }
+    .img_cont_1 {
+      @include about_position(1, 2, 1, 1);
+    }
+    .text_desc_1 {
+      width: 85%;
+      @include about_position(2, 3, 1, 1);
+    }
+    .bg_image_2 {
+      width: 90%;
+      @include about_position(1, 2, 2, 3);
+      place-self: auto;
+    }
+    .img_cont_2 {
+      width: 90%;
+      @include about_position(2, 3, 2, 3);
+    }
+    .text_desc_2 {
+      width: 85%;
+      @include about_position(1, 2, 2, 3);
+    }
+  }
+  .reviews_section {
+    .headline {
+      @include about_position(1, 3, 1, 1);
+    }
+    .bg_image {
+      width: 50%;
+      @include about_position(1, 1, 2, 3);
+    }
+    .reviews {
+      @include about_position(1, 1, 2, 3);
+      @include dis-flex(row, center, center);
+      gap: 50px;
+      flex-wrap: wrap;
+      .cust_review {
+        width: 400px;
+        @include dis-flex(column, center, center);
+      }
+    }
+  }
+  .wedding{
+    .info{
+      width: 60%;
+      margin-left: 100px;
+    }
+  }
 }
-
-// ! full
-// .feature_section{
-//   @include dis-grid(repeat(2,1fr),repeat(3,1fr));
-//   .background_flower_1{
-//     @include feature_section_background_flowers(1,1,1,1);
-//     img{
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-//   .text_1{
-//     margin-left: 50px;
-//     @include feature_section_texts(1,1,1,1);
-//     @include dis-flex(column, center, flex-start);
-//     gap: 20px;
-//   }
-//   .info_img_1{
-//     @include feature_section_images(2,3,1,1);
-//   }
-//   .background_flower_2{
-//     @include feature_section_background_flowers(2,4,2,2);
-//     place-self: end;
-//     img{
-//       padding-left: 150px
-//     }
-//   }
-//   .text_2{
-//     @include feature_section_texts(2,4,2,2);
-//     @include dis-flex(column, center, flex-start);
-//     gap: 20px;
-//   }
-//   .info_img_2{
-//     @include feature_section_images(1,1,2,2);
-//   }
-//   .background_flower_3{
-//     @include feature_section_background_flowers(1,1,3,4);
-//     place-self: start;
-//   }
-//   .text_3{
-//     margin-left: 50px;
-//     @include feature_section_texts(1,1,3,4);
-//     @include dis-flex(column, center, flex-start);
-//     gap: 20px;
-//   }
-//   .info_img_3{
-//     @include feature_section_images(2,3,3,4);
-//   }
-// }
