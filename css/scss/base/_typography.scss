@@ -22,6 +22,12 @@ p {
   color: $msg-font-color;
 }
 
+.pagination_link_text{
+  font-size: $dear-font-size;
+  color: $secondary-color; 
+  font-weight: bolder;
+}
+
 .about_p {
   font-size: $msg-font-size;
   font-weight: $msg-font-weight;

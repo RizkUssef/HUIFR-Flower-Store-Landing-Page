@@ -3,21 +3,7 @@
 @import "../abstracts/placeholders";
 
 .headline_section {
-  height: 100vh;
-  background-image: url("../../../imgs/bgs/landing intro.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include dis-flex(column, center, center);
-  .headline_div {
-    padding: 20px 50px;
-    @include dis-flex(column, center, center);
-    gap: 20px;
-    width: 95%;
-    align-self: center;
-    background-color: rgba($color: #ffffff, $alpha: 0.3);
-    backdrop-filter: blur(3px);
-    border-radius: 25px;
-  }
+  @include headline_section_all(url("../../../imgs/bgs/landing intro.png"))
 }
 .feature_section {
   @include dis-grid(repeat(1, 1fr), repeat(6, 1fr));
@@ -187,16 +173,6 @@
 }
 
 @media screen and (min-width: 800px) and (max-width: 1024px) {
-  .headline_section {
-    .headline_div {
-      align-items: flex-start;
-      width: 60%;
-      border-radius: 0px;
-      border-top-left-radius: 25px;
-      border-bottom-left-radius: 25px;
-      align-self: flex-end;
-    }
-  }
   .feature_section {
     @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
     .background_flower_1 {
@@ -288,16 +264,6 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
-  .headline_section {
-    .headline_div {
-      align-items: flex-start;
-      width: 60%;
-      border-radius: 0px;
-      border-top-left-radius: 25px;
-      border-bottom-left-radius: 25px;
-      align-self: flex-end;
-    }
-  }
   .feature_section {
     @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
     .background_flower_1 {
@@ -390,16 +356,6 @@
 }
 
 @media screen and (min-width: 1351px) and (max-width: 2000px) {
-  .headline_section {
-    .headline_div {
-      align-items: flex-start;
-      width: 45%;
-      border-radius: 0px;
-      border-top-left-radius: 25px;
-      border-bottom-left-radius: 25px;
-      align-self: flex-end;
-    }
-  }
   .feature_section {
     @include dis-grid(repeat(2, 1fr), repeat(3, 1fr));
     .background_flower_1 {

@@ -1,96 +1,226 @@
-@mixin dis-flex($direction,$justify,$align){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+@mixin dis-flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin border($width,$type,$color,$radius){
-    border: $width $type $color;
-    border-radius: $radius;
+@mixin border($width, $type, $color, $radius) {
+  border: $width $type $color;
+  border-radius: $radius;
 }
 
-@mixin dis-grid($columns,$rows){
-    display: grid;
-    grid-template-columns: $columns;
-    grid-template-rows: $rows;
+@mixin dis-grid($columns, $rows) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
 }
 
-@mixin img-uploaded($rotate){
-    object-fit: cover;
-    border-radius: 5px; 
-    border-bottom:50px solid #ffffff;
-    border-top:10px solid #ffffff;
-    border-left:10px solid #ffffff;
-    border-right:10px solid #ffffff;
-    transform: $rotate;
+@mixin img-uploaded($rotate) {
+  object-fit: cover;
+  border-radius: 5px;
+  border-bottom: 50px solid #ffffff;
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid #ffffff;
+  border-right: 10px solid #ffffff;
+  transform: $rotate;
 }
 
-@mixin pick-radio-flower($bg-image){
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    background-image: $bg-image;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+@mixin pick-radio-flower($bg-image) {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  background-image: $bg-image;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-@mixin nav-link-hover-active(){
-    @include border(1.5px, solid, $primary-color, 15px);
-    color: $secondary-color;
-    background-color: $primary-color;
+@mixin nav-link-hover-active() {
+  @include border(1.5px, solid, $primary-color, 15px);
+  color: $secondary-color;
+  background-color: $primary-color;
 }
 
-@mixin feature_section_background_flowers($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
-    @media screen and (min-width: 1025px) and (max-width: 1350px){
-        width: 80%;
-    }
-    @media screen and (min-width: 1351px) and (max-width: 2000px){
-        width: 70%;
-    }
-    width: 100%;
-    grid-column-start: $grid-column-start;
-    grid-column-end: $grid-column-end;
-    grid-row-start: $grid-row-start;
-    grid-row-end: $grid-row-end;
+@mixin feature_section_background_flowers(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end
+) {
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    width: 70%;
+  }
+  width: 100%;
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
 }
 
-@mixin feature_section_texts($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
-    @media screen and (min-width: 1025px) and (max-width: 1350px){
-        width: 80%;
-    }
-    @media screen and (min-width: 1351px) and (max-width: 2000px){
-        width: 80%;
-    }
-    place-self: center;
-    width: 90%;
-    grid-column-start: $grid-column-start;
-    grid-column-end: $grid-column-end;
-    grid-row-start: $grid-row-start;
-    grid-row-end: $grid-row-end;
+@mixin feature_section_texts(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end
+) {
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    width: 80%;
+  }
+  place-self: center;
+  width: 90%;
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
 }
 
-@mixin feature_section_images($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
-    @media screen and (min-width: 1025px) and (max-width: 1350px){
-        width: 80%;
-    }
-    @media screen and (min-width: 1351px) and (max-width: 2000px){
-        width: 70%;
-    }
-    place-self: center;
-    grid-column-start: $grid-column-start;
-    grid-column-end: $grid-column-end;
-    grid-row-start: $grid-row-start;
-    grid-row-end: $grid-row-end;
+@mixin feature_section_images(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end
+) {
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    width: 70%;
+  }
+  place-self: center;
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
+  width: 95%;
+  img {
+    border-radius: 50px;
+  }
+}
+
+@mixin about_position(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end
+) {
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
+}
+
+@mixin headline_section_all($bgImg) {
+  height: 100vh;
+  background-image: $bgImg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  @include dis-flex(column, center, center);
+  .headline_div {
+    padding: 20px 50px;
+    @include dis-flex(column, center, center);
+    gap: 20px;
     width: 95%;
-    img{
-        border-radius: 50px;
-      }
+    align-self: center;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+  }
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+    .headline_div {
+      align-items: flex-start;
+      width: 60%;
+      border-radius: 0px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      align-self: flex-end;
+    }
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    .headline_div {
+      align-items: flex-start;
+      width: 60%;
+      border-radius: 0px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      align-self: flex-end;
+    }
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    .headline_div {
+      align-items: flex-start;
+      width: 45%;
+      border-radius: 0px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      align-self: flex-end;
+    }
+  }
 }
 
-@mixin about_position($grid-column-start,$grid-column-end,$grid-row-start,$grid-row-end){
-    grid-column-start: $grid-column-start;
-    grid-column-end: $grid-column-end;
-    grid-row-start: $grid-row-start;
-    grid-row-end: $grid-row-end;
+@mixin bouquets() {
+  position: relative;
+  width: 270px;
+  max-height: 420px;
+  min-height: 420px;
+  padding-bottom: 20px;
+  @include dis-flex(column, center, center);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  backdrop-filter: blur(3px);
+  border-radius: 25px;
+  gap: 10px;
+  padding-bottom: 10px;
+  &:hover {
+    .image {
+      transform: scale(1.2);
+    }
+  }
+  .image {
+    flex: 1 0 100%;
+    @include dis-flex(row, center, center);
+    width: 175px;
+    transition: transform 0.5s ease-in-out;
+  }
+  h1 {
+    flex: 0;
+    align-self: flex-start;
+    margin-left: 17px;
+  }
+  .price {
+    flex: 0;
+    align-self: flex-end;
+    margin-right: 17px;
+    @include bouquets_p;
+  }
+  .bottom {
+    flex: 0;
+    margin: 0px 10px;
+    width: 100%;
+    @include dis-flex(row, space-evenly, center);
+    gap: 85px;
+    .orders {
+      @include bouquets_p;
+    }
+    .likes {
+      @include bouquets_p;
+    }
+  }
+
+
+}
+
+@mixin bouquets_p() {
+  p {
+    @include dis-flex(row, center, center);
+    gap: 6px;
+    img {
+      width: 20px;
+    }
+  }
 }

@@ -1,0 +1,49 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+.headline_hampers {
+  @include headline_section_all(url("../../../imgs/bgs/2.jpg"));
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+}
+.hamper_box {
+    margin: 30px 0px;
+    @include dis-flex(column, center, center);
+    gap: 50px;
+    .head {
+      align-self: flex-start;
+      margin-left: 15px;
+    }
+    .bouquets_container {
+      width: 90%;
+      @include dis-flex(row, center, center);
+      gap: 50px;
+      flex-wrap: wrap;
+      .bouquets {
+        @include bouquets;
+      }
+    }
+  }
