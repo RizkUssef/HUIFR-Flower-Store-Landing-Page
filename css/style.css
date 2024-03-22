@@ -53,6 +53,13 @@ h1 {
   color: #5c162e;
 }
 
+h2 {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Fredoka", sans-serif;
+  color: #5c162e;
+}
+
 p {
   font-size: 20px;
   font-weight: bolder;
@@ -2778,4 +2785,110 @@ p {
 }
 .exquisite_bouquets .bouquets_container .bouquets .bottom .likes p img {
   width: 20px;
+}
+
+.one_bouquet {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.one_bouquet .img_container {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 25px;
+}
+.one_bouquet .img_container .image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 100%;
+  width: 60%;
+}
+.one_bouquet .img_container .option {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.one_bouquet .img_container .option a img {
+  transition: transform 0.5s ease-in-out;
+  width: 30px;
+  margin: 10px 30px;
+}
+.one_bouquet .img_container .option a:hover img {
+  transform: scale(1.2);
+}
+.one_bouquet .description {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+.one_bouquet .description .bouquet_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.one_bouquet .description .bouquet_info .one_info {
+  width: 50%;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.one_bouquet .description .bouquet_info .one_info .single_flower_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 25px;
+}
+.one_bouquet .description .bouquet_info .one_info .single_flower_image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.one_bouquet .description .numbers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+.one_bouquet .description .numbers img {
+  width: 30px;
+}
+.one_bouquet .description .numbers .likes,
+.one_bouquet .description .numbers .order,
+.one_bouquet .description .numbers .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }/*# sourceMappingURL=style.css.map */
