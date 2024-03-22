@@ -2,8 +2,9 @@
 @import "../abstracts/variables";
 @import "../abstracts/placeholders";
 
-.headline_hampers {
-  @include headline_section_all(url("../../../imgs/bgs/2.jpg"));
+.headline_exquisite {
+  @include headline_section_all(url("../../../imgs/bgs/flower bg 2.jpg"));
+//   background-size: contain;
   @media screen and (min-width: 800px) and (max-width: 1024px) {
     .headline_div {
       border-radius: 0px;
@@ -29,7 +30,7 @@
     }
   }
 }
-.hamper_box {
+.exquisite_bouquets {
   margin: 30px 0px;
   @include dis-flex(column, center, center);
   gap: 50px;

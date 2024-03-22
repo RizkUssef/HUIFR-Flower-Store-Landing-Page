@@ -1,0 +1,249 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+.headline_custom {
+  @include headline_section_all(url("../../../imgs/bgs/custom bg.jpg"));
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    .headline_div {
+      border-radius: 0px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.custom_form {
+  margin: 30px 0px;
+  @include dis-flex(column, center, center);
+  gap: 50px;
+  .head {
+    align-self: flex-start;
+    margin: auto;
+    width: 95%;
+    @include dis-flex(row, space-between, center);
+    .filter {
+      button {
+        min-width: 70px;
+        max-width: 70px;
+        padding: 8px 15px;
+      }
+      .filter-btn {
+        border: none;
+      }
+      @include dis-flex(row, center, center);
+      gap: 50px;
+      position: relative;
+      .filter-drop {
+        display: none;
+        position: absolute;
+        top: 33px;
+        z-index: 1;
+        .unraduis-btn {
+          border-radius: 0px;
+          border: none;
+        }
+        .unraduis-btn-color {
+          //   border-radius: 0px;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border: none;
+        }
+        .dropdown-name {
+          position: relative;
+          .dropdown-content-name {
+            display: none;
+            position: absolute;
+            right: 70px;
+            top: 0px;
+            background-color: $secondary-color;
+            z-index: 1;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            a {
+              border-top-left-radius: 15px;
+              border-top-right-radius: 0px;
+              border-bottom-left-radius: 15px;
+              border-bottom-right-radius: 15px;
+              text-align: center;
+              padding: 5.5px 15px;
+              display: block;
+              background-color: $secondary-color;
+              color: $btn-font-color;
+              font-size: $btn-font-size;
+              font-weight: $btn-font-weight;
+              cursor: pointer;
+              color: $primary-color;
+              &:hover {
+                color: $secondary-color;
+                background-color: $primary-color;
+              }
+            }
+          }
+          &:hover {
+            .dropdown-content-name {
+              display: block;
+            }
+          }
+        }
+        .dropdown-color {
+          position: relative;
+          .dropdown-content-color {
+            display: none;
+            position: absolute;
+            right: 70px;
+            top: 0px;
+            background-color: $secondary-color;
+            z-index: 1;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            a {
+              border-top-left-radius: 15px;
+              border-top-right-radius: 0px;
+              border-bottom-left-radius: 15px;
+              border-bottom-right-radius: 15px;
+              text-align: center;
+              padding: 5.5px 15px;
+              display: block;
+              background-color: $secondary-color;
+              color: $btn-font-color;
+              font-size: $btn-font-size;
+              font-weight: $btn-font-weight;
+              cursor: pointer;
+              color: $primary-color;
+              &:hover {
+                color: $secondary-color;
+                background-color: $primary-color;
+              }
+            }
+          }
+          &:hover {
+            .dropdown-content-color {
+              display: block;
+            }
+          }
+        }
+      }
+      &:hover {
+        .filter-btn {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+        .filter-drop {
+          display: block;
+        }
+      }
+    }
+  }
+  .flower-form {
+    form {
+      @include dis-flex(column, center, center);
+        gap: 50px;
+      .all-flowers {
+        @include dis-flex(row, center, center);
+        flex-wrap: wrap;
+        gap: 50px;
+        .checkbox {
+          position: relative;
+          width: 200px;
+          max-height: 420px;
+          min-height: 300px;
+          padding-bottom: 20px;
+          @include dis-flex(row, center, center);
+          background-color: rgba(255, 255, 255, 0.3);
+          -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+          border-radius: 25px;
+          gap: 10px;
+          padding-bottom: 10px;
+          input[type="checkbox"] {
+            transition: background-size 0.5s ease-in-out;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            &:checked {
+              background-color: $secondary-color;
+              background-size: 80%;
+              border-radius: 25px;
+            }
+          }
+          .flower-select-1 {
+            background-image: url("../../../imgs/flower without boquet/5.png");
+          }
+          .flower-select-2 {
+            background-image: url("../../../imgs/flower without boquet/4.png");
+          }
+          .flower-select-3 {
+            background-image: url("../../../imgs/flower without boquet/11.png");
+          }
+          .flower-select-4 {
+            background-image: url("../../../imgs/flower without boquet/10.png");
+          }
+          .flower-select-5 {
+            background-image: url("../../../imgs/flower without boquet/11.png");
+          }
+          .flower-select-6 {
+            background-image: url("../../../imgs/flower without boquet/12.png");
+          }
+          .flower-select-7 {
+            background-image: url("../../../imgs/flower without boquet/7.png");
+          }
+          .flower-select-8 {
+            background-image: url("../../../imgs/flower without boquet/6.png");
+          }
+        }
+      }
+      .unmargin{
+        margin-right: 0px;
+      }
+      .buttons{
+        align-self: flex-end;
+        margin-right: 100px;
+      @include dis-flex(row, center, center);
+
+        .reset{
+            padding: 8px;
+            background-color: transparent;
+            img{
+                width: 20px;
+            }
+            &:hover{
+                background-color: transparent;
+            }
+        }
+      }
+    }
+  }
+}
