@@ -3,24 +3,37 @@
 @import "../abstracts/placeholders";
 
 .one_bouquet {
-  height: 100vh;
+  // height: 100vh;
   width: 90%;
   margin: auto;
-  @include dis-flex(row, center, center);
+  @include dis-flex(column , center, center);
+  padding: 150px 0px 50px 0px;
   gap: 100px;
+  @media screen and (min-width: 1025px) and (max-width: 1350px){
+    @include dis-flex(row, center, center);
+
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px){
+    @include dis-flex(row, center, center);
+  }
   .img_container {
     flex-basis: 30%;
-
     @include dis-flex(column, center, center);
     gap: 40px;
     background-color: rgba($color: #ffffff, $alpha: 0.3);
     backdrop-filter: blur(3px);
     border-radius: 25px;
-    // width: 90%;
+
     .image {
       @include dis-flex(row, center, center);
       flex: 1 0 100%;
       width: 60%;
+      img {
+        transition: transform 0.5s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
     }
     .option {
       width: 100%;
@@ -40,9 +53,7 @@
     }
   }
   .description {
-    // width: 100%;
     flex-basis: 50%;
-
     @include dis-flex(column, center, flex-start);
     gap: 20px;
     .bouquet_info {
@@ -70,6 +81,7 @@
       width: 100%;
       @include dis-flex(row, flex-start, center);
       gap: 50px;
+      margin: 20px 0px;
       img {
         width: 30px;
       }
@@ -79,6 +91,31 @@
         @include dis-flex(row, space-between, center);
         gap: 10px;
       }
+    }
+  }
+}
+
+.line {
+  width: 60%;
+  height: 1.5px;
+  background-color: $secondary-color;
+  margin: auto;
+}
+.related_bouquets {
+  margin: 50px 0px;
+  @include dis-flex(column, center, center);
+  gap: 50px;
+  .head {
+    align-self: center;
+    margin-left: 15px;
+  }
+  .related_container {
+    width: 90%;
+    @include dis-flex(row, center, center);
+    gap: 50px;
+    flex-wrap: wrap;
+    .bouquets {
+      @include bouquets;
     }
   }
 }

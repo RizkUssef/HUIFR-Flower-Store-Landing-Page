@@ -1,0 +1,65 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+@import "../abstracts/placeholders";
+
+.login {
+  @include headline_section_all(url("../../../imgs/bgs/flower bg 2.jpg"));
+  height: 170vh;
+  .login_container {
+    @include all_forms_container(1fr ,45%);
+    margin-top: 90px;
+    .image {
+      @include all_forms_images(1, 2, 1, 2, 25px, 25px, 0px, 0px);
+    }
+    .login_form {
+      @include all_forms_position(1,2,2,3);
+      @include dis-flex(column, center, center);
+      gap: 20px;
+      margin: 20px;
+      @include form();
+      h1 {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  .login {
+    height: 100vh;
+    .login_container {
+      .image {
+        @include all_forms_images(2, 3, 1, 2, 0px, 25px, 0px, 25px);
+      }
+      .login_form {
+        @include all_forms_position(1,2,1,2);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1350px) {
+    .login {
+        height: 100vh;
+        .login_container {
+          .image {
+            @include all_forms_images(2, 3, 1, 2, 0px, 25px, 0px, 25px);
+          }
+          .login_form {
+            @include all_forms_position(1,2,1,2);
+          }
+        }
+      }
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    .login {
+        height: 100vh;
+        .login_container {
+          .image {
+            @include all_forms_images(2, 3, 1, 2, 0px, 25px, 0px, 25px);
+          }
+          .login_form {
+            @include all_forms_position(1,2,1,2);
+          }
+        }
+      }
+  }

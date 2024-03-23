@@ -30,8 +30,8 @@
                 <li class="nav-item" id="profile"><a id="anchor-link" href="../pages/custom.html">Custom</a></li>
                 <li class="nav-item" id="services"><a id="anchor-link" href="../pages/hampers.html">Hampers</a></li>
                 <li class="nav-item" id="projects"><a id="anchor-link" href="../pages/widding.html">Widding</a></li>
-                <li class="nav-item" id="about"><a id="anchor-link" href="../index.html#about_us">about Us</a></li>
-                <li class="nav-item" id="contact us"><a id="anchor-link" href="../pages/contact us.html">contact us</a></li>
+                <!-- <li class="nav-item" id="about"><a id="anchor-link" href="#">aboutUs</a></li> -->
+                <li class="nav-item" id="contact us"><a id="anchor-link" href="../pages/contact us.html">contactUs</a></li>
             </ul>
             <ul class="reg_log">
                 <li class="nav-item" id="reg"><a id="anchor-link" href="../pages/register.html">register</a></li>
@@ -41,11 +41,24 @@
         <button id="show_btn" class="nav_btn"><img id="close_btn" src="../imgs/icons/bars-sort 1.svg" alt="no"></button>
     </header>
 
-    <section>
-        <div>
-            Contact Us
+    <section class="contact">
+        <div class="contact_container">
+            <div class="contact_form">
+                <h1>Contact Us</h1>
+                <form action="" method="post">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <button class="submit_btn" type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="image">
+                <img src="../imgs/msg images/contact us 2.jpeg" alt="">
+            </div>
         </div>
     </section>
+
     <footer class="footer">
         <div class="left_flower_bg">
         </div>

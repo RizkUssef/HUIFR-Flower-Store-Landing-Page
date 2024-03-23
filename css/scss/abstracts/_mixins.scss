@@ -211,8 +211,6 @@
       @include bouquets_p;
     }
   }
-
-
 }
 
 @mixin bouquets_p() {
@@ -223,4 +221,99 @@
       width: 20px;
     }
   }
+}
+
+@mixin form() {
+  form {
+    @include dis-flex(column, center, flex-start);
+    gap: 10px;
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+    }
+    label {
+      font-size: 20px;
+      color: $primary-color;
+      text-transform: capitalize;
+      font-weight: bolder;
+    }
+    input,
+    textarea {
+      background-color: transparent;
+      border: 1px solid $primary-color;
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 18px;
+      color: $primary-color;
+      transition: background-color 0.5s ease-in-out;
+      transition: border 0.5s ease-in-out;
+      &:focus {
+        background-color: #efdfe3;
+        border: 1px solid #efdfe3;
+      }
+    }
+    .submit_btn {
+      border: 1px solid $primary-color;
+      margin-right: 0px;
+    }
+  }
+}
+
+@mixin all_forms_container($first-column, $second-column) {
+  width: 90%;
+  @include dis-grid(1fr, auto);
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  backdrop-filter: blur(3px);
+  border-radius: 25px;
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+    @include dis-grid($first-column $second-column, 1fr);
+    gap: 20px;
+  }
+  @media screen and (min-width: 1025px) and (max-width: 1350px) {
+    @include dis-grid($first-column $second-column, 1fr);
+    gap: 50px;
+    width: 80%;
+  }
+  @media screen and (min-width: 1351px) and (max-width: 2000px) {
+    width: 70%;
+    @include dis-grid($first-column $second-column, 1fr);
+    gap: 50px;
+  }
+}
+
+@mixin all_forms_images(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end,
+  $top-left,
+  $top-right,
+  $bottom-left,
+  $bottom-right
+) {
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
+  border-radius: 25px;
+  img {
+    object-fit: cover;
+    border-top-right-radius: $top-right;
+    border-top-left-radius: $top-left;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+  }
+}
+
+@mixin all_forms_position(
+  $grid-column-start,
+  $grid-column-end,
+  $grid-row-start,
+  $grid-row-end
+) {
+  grid-column-start: $grid-column-start;
+  grid-column-end: $grid-column-end;
+  grid-row-start: $grid-row-start;
+  grid-row-end: $grid-row-end;
 }
