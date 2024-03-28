@@ -55,8 +55,9 @@
     @include dis-flex(row, center, center);
     gap: 35px;
     a {
-      img {
-        width: 25px;
+      i {
+        color: $secondary-color;
+        font-size: 25px;
       }
     }
     .active {

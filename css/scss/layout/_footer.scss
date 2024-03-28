@@ -27,8 +27,9 @@
     .text {
       @include dis-flex(row, center, center);
       gap: 5px;
-      img {
-        width: 15px;
+      i {
+        color: $primary-color;
+        font-size: 25px;
       }
       p {
         color: $primary-color;

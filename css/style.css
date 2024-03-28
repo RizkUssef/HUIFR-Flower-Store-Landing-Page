@@ -510,8 +510,9 @@ p {
   align-items: center;
   gap: 5px;
 }
-.footer .footer_cont .text img {
-  width: 15px;
+.footer .footer_cont .text i {
+  color: #5c162e;
+  font-size: 25px;
 }
 .footer .footer_cont .text p {
   color: #5c162e;
@@ -2116,8 +2117,9 @@ p {
   align-items: center;
   gap: 35px;
 }
-.pagination .pagination_links a img {
-  width: 25px;
+.pagination .pagination_links a i {
+  color: #c09aa5;
+  font-size: 25px;
 }
 .pagination .pagination_links .active {
   color: #5c162e;
@@ -2610,8 +2612,9 @@ p {
   padding: 8px;
   background-color: transparent;
 }
-.custom_form .flower-form form .buttons .reset img {
-  width: 20px;
+.custom_form .flower-form form .buttons .reset i {
+  font-size: 20px;
+  color: #5c162e;
 }
 .custom_form .flower-form form .buttons .reset:hover {
   background-color: transparent;
@@ -2858,12 +2861,13 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-.one_bouquet .img_container .option a img {
+.one_bouquet .img_container .option a i {
   transition: transform 0.5s ease-in-out;
-  width: 30px;
+  font-size: 30px;
+  color: #c09aa5;
   margin: 10px 30px;
 }
-.one_bouquet .img_container .option a:hover img {
+.one_bouquet .img_container .option a:hover i {
   transform: scale(1.2);
 }
 .one_bouquet .description {
@@ -2915,8 +2919,9 @@ p {
   gap: 50px;
   margin: 20px 0px;
 }
-.one_bouquet .description .numbers img {
-  width: 30px;
+.one_bouquet .description .numbers i {
+  font-size: 20px;
+  color: #c09aa5;
 }
 .one_bouquet .description .numbers .likes,
 .one_bouquet .description .numbers .order,

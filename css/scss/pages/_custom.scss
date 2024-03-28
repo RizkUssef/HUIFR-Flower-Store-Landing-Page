@@ -236,8 +236,9 @@
         .reset{
             padding: 8px;
             background-color: transparent;
-            img{
-                width: 20px;
+            i{
+                font-size: 20px;
+                color: $primary-color;
             }
             &:hover{
                 background-color: transparent;

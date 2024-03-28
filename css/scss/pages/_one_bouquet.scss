@@ -39,13 +39,14 @@
       width: 100%;
       @include dis-flex(row, space-between, center);
       a {
-        img {
+        i {
           transition: transform 0.5s ease-in-out;
-          width: 30px;
+          font-size: 30px;
+          color:$secondary-color;
           margin: 10px 30px;
         }
         &:hover {
-          img {
+          i {
             transform: scale(1.2);
           }
         }
@@ -82,8 +83,9 @@
       @include dis-flex(row, flex-start, center);
       gap: 50px;
       margin: 20px 0px;
-      img {
-        width: 30px;
+      i {
+        font-size: 20px;
+        color:$secondary-color;
       }
       .likes,
       .order,
